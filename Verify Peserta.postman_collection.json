@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "37e420cd-baa1-4375-bc58-6f7e9a726425",
+		"name": "Verify Peserta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23902502"
+	},
+	"item": [
+		{
+			"name": "Verify",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"peserta\": \"(id)\",\r\n  \"status\": \"TOLAK\"\r\n}\r\n\r\n// {  \r\n//  \"peserta\": \"(id)\",\r\n// \"status\": \"TOLAK\",\r\n// \"catatan\": \"Test Catatan\",\r\n// \"alasan\": \"Test Alasan\"\r\n// }\r\n\r\n// {  \r\n//  \"peserta\": \"id\",\r\n// \"status\": \"TERIMA\",\r\n// \"catatan\": \"\", //nullable\r\n// \"alasan\": \"\" //nullable\r\n// }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/auction/participants/verify"
+			},
+			"response": []
+		}
+	]
+}

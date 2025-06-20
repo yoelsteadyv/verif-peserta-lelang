@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('participant_reasons', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->uuid('peserta_id');
             $table->enum('status', ['BIDDING', 'DITOLAK']);
             $table->text('catatan')->nullable();

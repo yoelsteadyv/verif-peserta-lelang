@@ -10,7 +10,10 @@ class ParticipantReason extends Model
     use HasFactory;
 
     protected $table = 'participant_reasons';
-    protected $fillable = ['peserta_id', 'status', 'catatan', 'alasan'];
+    public $incrementing = false;
+    protected $keyType = 'string';
+    protected $fillable = ['id', 'peserta_id', 'status', 'catatan', 'alasan'];
+
 
     public function participant()
     {

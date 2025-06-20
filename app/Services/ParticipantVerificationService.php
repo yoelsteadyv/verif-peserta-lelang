@@ -6,6 +6,7 @@ use App\Models\Participant;
 use App\Models\ParticipantReason;
 use Illuminate\Support\Facades\DB;
 use App\Services\PinGeneratorService;
+use Illuminate\Support\Str;
 
 class ParticipantVerificationService
 {
@@ -29,6 +30,7 @@ class ParticipantVerificationService
       }
 
       ParticipantReason::create([
+        'id' => Str::uuid(),
         'peserta_id' => $participant->id,
         'status' => $statusFinal,
         'catatan' => $data['catatan'] ?? null,
